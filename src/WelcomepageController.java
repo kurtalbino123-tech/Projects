@@ -33,7 +33,6 @@ public class WelcomepageController {
     @FXML private Label lblFemaleResidents;
     @FXML private Label lblSeniorResidents;
     @FXML private Label lblMinorResidents;
-
     @FXML private Button btnDashboard;        // Dashboard button to stay on welcome page
     @FXML private Button btnExit;             // Exit button to return to login page
     @FXML private Button btnResidents;        // Residents button to navigate to residents page
