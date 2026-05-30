@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WelcomepageController">
+   <children>
+      <AnchorPane prefHeight="1000.0" prefWidth="300.0" style="-fx-background-color: #00008B;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="320.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView blendMode="LIGHTEN" fitHeight="146.0" fitWidth="224.0" layoutX="-21.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/Gemini_Generated_Image_5xsm7b5xsm7b5xsm.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#f2f0f0" layoutX="168.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RIS" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="50.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#eae7e7" layoutX="21.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resident Information System" wrappingWidth="250.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="222.4" prefHeight="664.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <Button fx:id="btnDashboard" alignment="BASELINE_LEFT" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleDashboard" onMouseEntered="#onButtonHoverEnter" onMouseExited="#onButtonHoverExit" prefHeight="60.0" prefWidth="270.0" style="-fx-background-color: rgba(255, 255, 255, 0.2); -fx-cursor: hand; -fx-background-radius: 15; -fx-border-radius: 15;" text=" Dashboard" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnResidents" alignment="BASELINE_LEFT" layoutX="15.0" layoutY="85.0" mnemonicParsing="false" onAction="#handleResidents" onMouseEntered="#onButtonHoverEnter" onMouseExited="#onButtonHoverExit" prefHeight="60.0" prefWidth="270.0" style="-fx-background-color: rgba(255, 255, 255, 0.2); -fx-cursor: hand; -fx-background-radius: 15; -fx-border-radius: 15;" text=" Residents" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <!-- MODIFIED LINE 45-50: Added fx:id="btnAddresses" and onAction="#handleAddresses" to wire button to navigation handler, added event handlers for hover effects -->
+                  <Button fx:id="btnAddresses" alignment="CENTER_LEFT" layoutX="15.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleAddresses" onMouseEntered="#onButtonHoverEnter" onMouseExited="#onButtonHoverExit" prefHeight="60.0" prefWidth="270.0" style="-fx-cursor: hand; -fx-padding: 0 0 0 20; -fx-background-color: rgba(255, 255, 255, 0.2); -fx-background-radius: 15; -fx-border-radius: 15;" text="Addresses" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDocuments" alignment="CENTER_LEFT" layoutX="15.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleDocuments" onMouseEntered="#onButtonHoverEnter" onMouseExited="#onButtonHoverExit" prefHeight="60.0" prefWidth="270.0" style="-fx-cursor: hand; -fx-padding: 0 0 0 20; -fx-background-color: rgba(255, 255, 255, 0.2); -fx-background-radius: 15; -fx-border-radius: 15;" text="Documents" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnContact" alignment="CENTER_LEFT" layoutX="15.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleContact" onMouseEntered="#onButtonHoverEnter" onMouseExited="#onButtonHoverExit" prefHeight="60.0" prefWidth="270.0" style="-fx-cursor: hand; -fx-padding: 0 0 0 20; -fx-background-color: rgba(255, 255, 255, 0.2); -fx-background-radius: 15; -fx-border-radius: 15;" text="Contact" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Reportsbtn" alignment="BASELINE_LEFT" layoutX="15.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleReports" onMouseEntered="#onButtonHoverEnter" onMouseExited="#onButtonHoverExit" prefHeight="60.0" prefWidth="270.0" style="-fx-cursor: hand; -fx-padding: 0 0 0 20; -fx-background-color: rgba(255, 255, 255, 0.2); -fx-background-radius: 15; -fx-border-radius: 15;" text="Reports" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="UsersandRolesbtn" alignment="BASELINE_LEFT" layoutX="15.0" layoutY="435.0" mnemonicParsing="false" onAction="#handleUsersandRoles" onMouseEntered="#onButtonHoverEnter" onMouseExited="#onButtonHoverExit" prefHeight="60.0" prefWidth="270.0" style="-fx-cursor: hand; -fx-padding: 0 0 0 20; -fx-background-color: rgba(255, 255, 255, 0.2); -fx-background-radius: 15; -fx-border-radius: 15;" text="Users &amp; Roles" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Logsbtn" alignment="BASELINE_LEFT" layoutX="15.0" layoutY="505.0" mnemonicParsing="false" onAction="#handleLogs" onMouseEntered="#onButtonHoverEnter" onMouseExited="#onButtonHoverExit" prefHeight="60.0" prefWidth="270.0" style="-fx-cursor: hand; -fx-padding: 0 0 0 20; -fx-background-color: rgba(255, 255, 255, 0.2); -fx-background-radius: 15; -fx-border-radius: 15;" text="Logs" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnExit" alignment="CENTER_LEFT" layoutX="15.0" layoutY="577.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="60.0" prefWidth="270.0" style="-fx-cursor: hand; -fx-padding: 0 0 0 20; -fx-background-color: rgba(255, 255, 255, 0.2); -fx-background-radius: 15; -fx-border-radius: 15;" text="Exit" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="310.8" layoutY="120.0" prefHeight="243.0" prefWidth="1303.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Text layoutX="31.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome back,">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Text>
+            <Text fill="DARKBLUE" layoutX="29.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin User!">
+               <font>
+                  <Font name="Arial Bold" size="55.0" />
+               </font>
+            </Text>
+            <Text fill="#8c8888" layoutX="31.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here's whats happening in your community.">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="243.0" fitWidth="669.0" layoutX="627.0" layoutY="-1.0" opacity="0.62" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../Downloads/c135cf32-3149-4742-b3b9-e684115f913d-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="300.0" layoutY="-3.0" prefHeight="102.0" prefWidth="1034.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0">
+         <children>
+            <Label layoutX="88.0" layoutY="33.0" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField layoutX="933.0" layoutY="15.0" promptText="Searh Residents" style="-fx-background-color: #f0f4f8; -fx-background-radius: 20; -fx-border-radius: 20; -fx-padding: 8 15 8 35;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="61.0" fitWidth="109.0" layoutX="1.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/f5c989ba-4cb4-4aff-b0ae-b3273346ee45-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="302.0" layoutY="343.0" prefHeight="150.0" prefWidth="1300.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="342.0">
+         <children>
+            <HBox layoutX="26.0" prefHeight="150.0" prefWidth="1254.0" spacing="50.0">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-radius: 5;">
+                     <children>
+                        <ImageView fitHeight="73.0" fitWidth="71.0" layoutX="6.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/meeting-room-people-logo-group-of-four-persons-in-circle-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="84.8" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Residents">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="lblTotalResidents" layoutX="84.0" layoutY="43.0" text="0" textFill="#0d2c6c">
+                           <font>
+                              <Font name="Arial Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="74.0" layoutY="91.0" text="+28 This Month" textFill="#2ecc71">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-radius: 5;">
+                     <children>
+                        <ImageView fitHeight="73.0" fitWidth="71.0" layoutX="6.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/a3e51d870776b43fd938ccc862d0ad66-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="84.8" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Male Residents">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="lblMaleResidents" layoutX="84.0" layoutY="43.0" text="0" textFill="#0d2c6c">
+                           <font>
+                              <Font name="Arial Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="74.0" layoutY="91.0" text="+28 This Month" textFill="#2ecc71">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-radius: 5;">
+                     <children>
+                        <ImageView fitHeight="73.0" fitWidth="71.0" layoutX="6.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/cartoon-of-woman-in-dress-or-gown-offering-showing-or-pointing-at-something.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="84.8" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Female Residents">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="lblFemaleResidents" layoutX="84.0" layoutY="43.0" text="0" textFill="#0d2c6c">
+                           <font>
+                              <Font name="Arial Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="74.0" layoutY="91.0" text="+28 This Month" textFill="#2ecc71">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="410.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-radius: 5;">
+                     <children>
+                        <ImageView fitHeight="58.0" fitWidth="107.0" layoutX="1.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/smiling-stickman-blue-tank-top-composing-words-letter-cubes-over-white-arranges-symbolizing-learning-creativity-421150087-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="78.8" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senior Citizens (60+)">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="lblSeniorResidents" layoutX="84.0" layoutY="43.0" text="0" textFill="#0d2c6c">
+                           <font>
+                              <Font name="Arial Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="74.0" layoutY="91.0" text="+28 This Month" textFill="#2ecc71">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="610.0" layoutY="10.0" prefHeight="200.0" prefWidth="191.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-radius: 5;">
+                     <children>
+                        <ImageView fitHeight="84.0" fitWidth="104.0" layoutY="16.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../Downloads/happy-stickman-walks-holding-red-balloon-blue-background-cheerful-happily-against-simple-animation-perfect-421148234-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="84.8" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minors (Below 18)">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="lblMinorResidents" layoutX="84.0" layoutY="43.0" text="0" textFill="#0d2c6c">
+                           <font>
+                              <Font name="Arial Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="74.0" layoutY="91.0" text="+28 This Month" textFill="#2ecc71">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="299.0" layoutY="514.0" prefHeight="486.0" prefWidth="1301.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="510.0">
+         <children>
+            <HBox layoutX="22.0" prefHeight="404.0" prefWidth="1280.0" spacing="15.0">
+               <children>
+                  <AnchorPane prefHeight="404.0" prefWidth="351.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-padding: 15;">
+                     <children>
+                        <Label layoutX="17.0" layoutY="14.0" text="Recent Registered Residents">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="residentTable" layoutX="28.0" layoutY="48.0" prefHeight="319.0" prefWidth="333.0">
+                           <columns>
+                              <TableColumn fx:id="colRecentName" prefWidth="150.0" text="Name" />
+                              <TableColumn fx:id="colRecentClass" prefWidth="150.0" text="Classification" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="404.0" prefWidth="389.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-padding: 15;">
+                     <children>
+                        <Label layoutX="17.0" layoutY="14.0" text="Residents by Age Group">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <PieChart fx:id="ageGroupChart" layoutX="33.0" layoutY="53.0" prefHeight="316.0" prefWidth="333.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="482.0" layoutY="10.0" prefHeight="404.0" prefWidth="349.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-padding: 15;">
+                     <children>
+                        <Label layoutX="17.0" layoutY="14.0" text="Quick Access">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="17.0" layoutY="46.0" prefHeight="325.0" prefWidth="318.0" spacing="25.0">
+                           <children>
+                              <!-- KEYPOINT: Bound Quick Access buttons to their respective navigation handler methods using fx:id and onAction -->
+                              <Button fx:id="btnQuickAddResident" onAction="#handleResidents" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="46.0" prefWidth="321.0" style="-fx-background-color: rgba(255, 255, 255, 0.2); -fx-cursor: hand; -fx-background-radius: 15; -fx-border-radius: 15;" text="Add New Resident">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnQuickAddAdmin" onAction="#handleAddNewAdmin" alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="321.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-background-radius: 15; -fx-border-radius: 15;" text="Add New Admin">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnQuickSearchResident" onAction="#handleQuickSearchResident" alignment="TOP_LEFT" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="321.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-background-radius: 15; -fx-border-radius: 15;" text="Search Resident">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnQuickViewAddresses" onAction="#handleAddresses" alignment="TOP_LEFT" layoutX="10.0" layoutY="103.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="321.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-background-radius: 15; -fx-border-radius: 15;" text="View Addresses">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnQuickViewDocuments" onAction="#handleDocuments" alignment="TOP_LEFT" layoutX="10.0" layoutY="149.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="318.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-background-radius: 15; -fx-border-radius: 15;" text="View Documents">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
